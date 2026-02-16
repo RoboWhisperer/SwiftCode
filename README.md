@@ -1,22 +1,23 @@
 # Swift Code
 
-Swift Code is a blazing-fast, no-telemetry text editor inspired by VS Code.
+Swift Code is a polished, browser-based editor inspired by VS Code with a privacy-first architecture.
 
-## Highlights
+## What's new
 
-- ⚡ **Fast**: zero dependency runtime, instant load in the browser.
-- 🔒 **No telemetry**: no analytics SDKs, no remote tracking calls.
-- 🧩 **VS Code extension compatibility primitives**:
-  - Load `.vsix` files locally.
-  - Parse `extension/package.json` manifests (including deflate-compressed entries).
-  - Show contributions (commands and activation events).
+- Redesigned interface with activity bar, multi-panel sidebar, tabs, and status bar.
+- Command Palette (`Ctrl/Cmd + Shift + P`) with quick actions.
+- Multi-document editing with dirty indicators and local persistence.
+- Find/replace panel, quick save, and file statistics.
+- Built-in VS Code-style Extension Store (search, install, uninstall).
+- Local extension importing from `.json` or `.vsix` (manifest parser included).
+- Theme toggle (dark/light), word wrap controls, and adjustable font size.
 
 ## Features
 
-- Editor with line numbers and keyboard-first save (`Ctrl/Cmd + S`).
-- Open individual files.
-- Open folder root and click files in a workspace sidebar.
-- Extension panel for local `.json` manifests and `.vsix` packages.
+- ⚡ Fast, dependency-light runtime.
+- 🔒 No telemetry by default.
+- 🧩 Extension manifest compatibility primitives.
+- 💾 Workspace/session state saved in browser local storage.
 
 ## Run
 
@@ -31,7 +32,3 @@ Then open `http://localhost:4173`.
 ```bash
 npm run test
 ```
-
-## Notes
-
-This is a lightweight editor shell focused on speed and privacy. Full VS Code extension runtime compatibility (complete `vscode` API, extension host process isolation, debugger bridge) is planned next.
