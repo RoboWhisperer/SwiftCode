@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swift Code</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="theme-dark">
+    <header class="title-bar">
+      <div class="window-controls">◼ ◻ ✕</div>
+      <div class="title">Swift Code — VSCode-Complete Feature Editor</div>
+      <div class="title-actions">
+        <button id="toggleCommandPalette">⌘P</button>
+        <button id="openSettings">⚙</button>
+      </div>
+    </header>
+
+    <main class="workbench">
+      <nav class="activity-bar" aria-label="Activity Bar">
+        <button class="activity active" data-view="explorer" title="Explorer">📁</button>
+        <button class="activity" data-view="search" title="Search">🔍</button>
+        <button class="activity" data-view="scm" title="Source Control">🌿</button>
+        <button class="activity" data-view="run" title="Run and Debug">▶</button>
+        <button class="activity" data-view="extensions" title="Extensions">🧩</button>
+      </nav>
+
+      <aside class="sidebar primary-sidebar" id="primarySidebar"></aside>
+
+      <section class="editor-zone">
+        <div class="breadcrumbs" id="breadcrumbs">swift-code / src / app.js</div>
+        <div class="tabs" id="tabs"></div>
+        <div class="editor-layout" id="editorLayout"></div>
+        <div class="panel" id="panel"></div>
+      </section>
+
+      <aside class="sidebar secondary-sidebar" id="secondarySidebar">
+        <h3>Feature Inventory</h3>
+        <input id="featureSearch" placeholder="Filter features..." />
+        <div id="featureStats"></div>
+        <div id="featureList"></div>
+      </aside>
+    </main>
+
+    <footer class="status-bar" id="statusBar"></footer>
+  </div>
+
+  <div class="overlay hidden" id="commandPaletteOverlay">
+    <div class="command-palette">
+      <input id="commandInput" placeholder="Type a command or feature..." autofocus />
+      <ul id="commandResults"></ul>
+    </div>
+  </div>
+
+  <div class="overlay hidden" id="settingsOverlay">
+    <div class="settings-modal">
+      <h2>Swift Code Settings</h2>
+      <label>Theme
+        <select id="themeSelect">
+          <option value="theme-dark">Dark</option>
+          <option value="theme-light">Light</option>
+        </select>
+      </label>
+      <label><input type="checkbox" id="toggleMinimap" checked /> Show Minimap</label>
+      <label><input type="checkbox" id="togglePanel" checked /> Show Panel</label>
+      <label><input type="checkbox" id="toggleWordWrap" /> Word Wrap</label>
+      <button id="closeSettings">Close</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
